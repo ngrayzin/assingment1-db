@@ -1,16 +1,10 @@
 USE carpooling_db;
 
 -- Inserting dummy users
-INSERT INTO Users (Email, Password) VALUES
-    ('test@gmail.com', '123456'),
-    ('bob@gmail.com', '123456'),
-    ('charile@gmail.com', '123456');
-
--- Inserting user profiles
-INSERT INTO UserProfiles (UserID, FirstName, LastName, MobileNumber, IsCarOwner, DriverLicenseNumber, CarPlateNumber) VALUES
-    (1, 'Alice', 'Smith', '123456789', 1, 'DL1234', 'ABC123'),
-    (2, 'Bob', 'Johnson', '987654321', 0, NULL, NULL),
-    (3, 'Charlie', 'Brown', '555555555', 1, 'DL5678', 'XYZ987');
+INSERT INTO Users (Email, Password, FirstName, LastName, MobileNumber, IsCarOwner, DriverLicenseNumber, CarPlateNumber) VALUES
+    ('test@gmail.com', '123456', 'Alice', 'Smith', '123456789', 1, 'DL1234', 'ABC123'),
+    ('bob@gmail.com', '123456', 'Bob', 'Johnson', '987654321', 0, NULL, NULL),
+    ('charile@gmail.com', '123456', 'Charlie', 'Brown', '555555555', 1, 'DL5678', 'XYZ987');
 
 -- Inserting trips by car owners
 INSERT INTO Trips (OwnerUserID, PickupLocation, AltPickupLocation, StartTravelTime, DestinationAddress, AvailableSeats, IsActive) VALUES
