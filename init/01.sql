@@ -39,6 +39,7 @@ CREATE TABLE IF NOT EXISTS TripEnrollments (
     EnrollmentID INT AUTO_INCREMENT PRIMARY KEY,
     TripID INT NOT NULL,
     PassengerUserID INT NOT NULL,
+    NumberOfSeats INT,
     EnrollmentTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT UNIQUE KEY unique_enrollment (TripID, PassengerUserID),
     FOREIGN KEY (TripID) REFERENCES Trips(TripID),
