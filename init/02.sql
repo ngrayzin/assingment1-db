@@ -12,6 +12,6 @@ INSERT INTO Trips (OwnerUserID, PickupLocation, AltPickupLocation, StartTravelTi
     (3, 'Park Avenue', NULL, '2023-11-22 08:30:00', 'Downtown', 2, TRUE);
 
 -- Enrolling passengers into trips
-INSERT INTO TripEnrollments (TripID, PassengerUserID) VALUES
-    (1, 2), -- User 2 (Bob) enrolls in Trip 1 (owned by Alice)
-    (2, 1); -- User 1 (Alice) enrolls in Trip 2 (owned by Charlie)
+INSERT INTO TripEnrollments (TripID, PassengerUserID, NumberOfSeats) VALUES
+    (1, 2, 1), -- User 2 (Bob) enrolls in Trip 1 (owned by Alice)
+    (2, 2, 1); -- User 2 (Bob) enrolls in Trip 2 (owned by Charlie)
